@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landig page</title>
+    <link rel="stylesheet" href="../css/postcss/styles.css">
+    <!-- <link rel="stylesheet" href="../css/src/styles.css"> -->
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://kit.fontawesome.com/d3f127b597.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="">
+    <div class=".container ">
+        <div class="main">
+            <header class="w-full">
+                <div class="civil-header  flex flex-col w-11/12 mx-auto">
+                    <div class="top flex w-full border-b border-black py-6">
+                        <div class="top-r flex justify-start w-1/5">
+                            <a href="#">
+                                <h3 class="text-2xl">استودیو موودی</h3>
+                            </a>
+                        </div>
+                        <div class="top-l flex justify-end w-4/5">
+                            <input type="text" id="search" class="search-input ml-10 px-2 w-0"
+                                placeholder="جستجو کنید...">
+                            <label for="search"><i
+                                    class="hover:text-gray-500 fa-solid fa-magnifying-glass text-xl pl-3 "></i></label>
+                            <i class="hover:text-gray-500 fa-solid fa-user text-xl px-3"></i>
+                            <div class="basket-shopping show-hide block relative">
+                                <i class="hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3"></i>
+                                <span
+                                    class="w-4 h-4 bg-red-700 rounded-full absolute flex justify-center items-center text-white text-xs -translate-y-3 -translate-x-1"></span>
+                                <div class="icon-basket-result absolute w-96 h-96 left-0 bg-gray-300 overflow-y-scroll">
+                                    <div class="civil relative">
+                                        <div class="top translate-y-6"></div>
+                                        <div class="down absolute top-0 w-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fav-shopping hide-show block relative">
+                                <!-- <i class="hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3"></i> -->
+                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3"></i>
+                                <span
+                                    class="w-4 h-4 bg-red-700 rounded-full absolute flex justify-center items-center text-white text-xs -translate-y-3 -translate-x-1"></span>
+                                <div class="icon-fav-result absolute w-96 left-0 bg-gray-300 h-96 overflow-y-scroll">
+                                    <div class="civil relative">
+                                        <div class="top"></div>
+                                        <div class="down "></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle border-b border-black py-6">
+                        <ul class="flex justify-around">
+                            <li class="hover:font-bold cursor-pointer ">خانه</li>
+                            <li class="hover:font-bold cursor-pointer ">فروشگاه</li>
+                            <li class="hover:font-bold cursor-pointer ">تزئینی</li>
+                            <li class="hover:font-bold cursor-pointer ">برند</li>
+                            <li class="hover:font-bold cursor-pointer ">صفحات</li>
+                            <li class="hover:font-bold cursor-pointer ">درباره ما</li>
+                            <li class="hover:font-bold cursor-pointer ">اخبار</li>
+                            <li class="hover:font-bold cursor-pointer ">تماس با ما</li>
+                        </ul>
+                    </div>
+                    <div class="down flex justify-around pt-6 pb-3">
+                        <div class="down-r">
+                            <i class="fa-solid fa-headset text-gray-600"></i>
+                            <span class="text-xs text-gray-500">پشتیبانی 7/24</span>
+                        </div>
+                        <div class="down-m">
+                            <i class="fa-solid fa-money-check-dollar text-gray-600"></i>
+                            <span class="text-xs text-gray-500">ضمانت بازگشت وجه</span>
+                        </div>
+                        <div class="down-l">
+                            <i class="fa-solid fa-truck text-gray-600"></i>
+                            <span class="text-xs text-gray-500">ارسال رایگان</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="home-main flex flex-col z-0">
+                <div class="large-pic flex ">
+                    <div class="img w-1/2 mr-20">
+                        <img src="../images/image 2.png" alt="" class="w-5/6">
+                    </div>
+                    <div class="large-image-description flex flex-col justify-center w-1/2 pr-20">
+                        <span class="text-xs mb-5">تخفیفات ویژه این هفته</span>
+                        <p class="text-2xl">فروش ویژه مبلمان مدرن</p>
+                        <p class="text-2xl">تخفیف %50</p>
+                        <input type="submit" value="دیدن" class="border border-black w-20 py-2 mt-5 cursor-pointer">
+                    </div>
+                </div>
+                <div class="courser product-all w-11/12 mx-auto">
+                    <div class="product-top flex w-full mx-auto my-3">
+                        <div class="product-top-right flex w-1/2 ml-2">
+                            <div class="img">
+                                <img src="../images/image 3.png" alt="" class="">
+                            </div>
+                            <div class="desc flex flex-col justify-center">
+                                <p class="text-right font-semibold py-6">صندلی INY VINTAGE</p>
+                                <input type="submit" value="جزئیات" class="border border-black w-14 cursor-pointer">
+                            </div>
+                        </div>
+                        <div class="product-top-left flex w-1/2 mr-2">
+                            <div class="img">
+                                <img src="../images/image 4.png" alt="" class="">
+                            </div>
+                            <div class="desc flex flex-col justify-center">
+                                <p class="text-right font-semibold py-6">صندلی INY VINTAGE</p>
+                                <input type="submit" value="جزئیات" class="border border-black w-14 cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-down w-full mx-auto">
+                        <div class=".civil-product-down w-full mx-auto block">
+                            <div class="product-down w-full mx-auto flex mb-2">
+                                <div class="product-1 w-1/4 h-full ml-2  relative">
+                                    <div
+                                        class="civil-product-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+                                        <h3 class="text-xl font-semibold">دکوری</h3>
+                                        <p class="my-6 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                                            چاپ و
+                                            با استفاده از طراحان
+                                            گرافیک است.</p>
+                                        <input type="submit" value="دیدن همه "
+                                            class="border w-20 py-2 mt-5 cursor-pointer">
+                                    </div>
+                                </div>
+                                <div class="product-2 product w-1/4 mx-2 relative">
+                                    <div class="result absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                            <div class="w-1/2 border-l">
+                                                <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                    data-id="1"></i>
+                                            </div>
+                                            <div class="w-1/2 border-r">
+                                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1 float-left "
+                                                    data-id="1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="../images/Rectangle 6.png" alt="" class="course-img w-full">
+                                    <p class="my-6">حوله کتانی ساحل</p>
+                                    <div class="rate flex text-gray-600 my-6">
+                                        <i class="fa-solid fa-star" data-id="1"></i>
+                                        <i class="fa-solid fa-star" data-id="2"></i>
+                                        <i class="fa-solid fa-star" data-id="3"></i>
+                                        <i class="fa-solid fa-star" data-id="4"></i>
+                                        <i class="fa-solid fa-star" data-id="5"></i>
+                                    </div>
+                                    <p class="py-6"><span>1</span>تومان</p>
+                                    <!-- <p class="py-6"><span>30000</span>تومان</p> -->
+
+                                </div>
+                                <div class="product-3 product w-1/4 mx-2 relative">
+                                    <div class="result absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                            <div class="w-1/2 border-l">
+                                                <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                    data-id="2"></i>
+                                            </div>
+                                            <div class="w-1/2 border-r">
+                                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1 "
+                                                    data-id="2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="../images/Rectangle 7.png" alt="" class="course-img w-full">
+                                    <p class="my-6">جعبه مربعی شیشه ای شفاف</p>
+                                    <div class="rate flex text-gray-600 my-6">
+                                        <i class="fa-solid fa-star" data-id="1"></i>
+                                        <i class="fa-solid fa-star" data-id="2"></i>
+                                        <i class="fa-solid fa-star" data-id="3"></i>
+                                        <i class="fa-solid fa-star" data-id="4"></i>
+                                        <i class="fa-solid fa-star" data-id="5"></i>
+                                    </div>
+                                    <p class="py-6"><span>2</span>تومان</p>
+                                </div>
+                                <div class="product-4 product w-1/4 mr-2 relative">
+                                    <div class="result absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                            <div class="w-1/2 border-l">
+                                                <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                    data-id="3"></i>
+                                            </div>
+                                            <div class="w-1/2 border-r">
+                                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                    data-id="3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="../images/Rectangle 8.png" alt="" class="course-img w-full">
+                                    <p class="my-6">دست ظروف سرامیکی کوچک</p>
+                                    <div class="rate flex text-gray-600 my-6">
+                                        <i class="fa-solid fa-star" data-id="1"></i>
+                                        <i class="fa-solid fa-star" data-id="2"></i>
+                                        <i class="fa-solid fa-star" data-id="3"></i>
+                                        <i class="fa-solid fa-star" data-id="4"></i>
+                                        <i class="fa-solid fa-star" data-id="5"></i>
+                                    </div>
+                                    <p class="py-6"><span>3</span>تومان</p>
+                                </div>
+                            </div>
+                            <div class="product-down w-full mx-auto flex mt-2">
+
+                                <div class="product-2 product w-1/4 ml-2 relative">
+                                    <div class="result absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                            <div class="w-1/2 border-l">
+                                                <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                    data-id="4"></i>
+                                            </div>
+                                            <div class="w-1/2 border-r">
+                                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1 "
+                                                    data-id="4"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="../images/Rectangle 6.png" alt="" class="course-img w-full">
+                                    <p class="my-6">حوله کتانی ساحل</p>
+                                    <div class="rate flex text-gray-600 my-6">
+                                        <i class="fa-solid fa-star" data-id="1"></i>
+                                        <i class="fa-solid fa-star" data-id="2"></i>
+                                        <i class="fa-solid fa-star" data-id="3"></i>
+                                        <i class="fa-solid fa-star" data-id="4"></i>
+                                        <i class="fa-solid fa-star" data-id="5"></i>
+                                    </div>
+                                    <p class="py-6"><span>4</span>تومان</p>
+                                </div>
+                                <div class="product-3 product w-1/4 mx-2 relative">
+                                    <div class="result absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                            <div class="w-1/2 border-l">
+                                                <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                    data-id="5"></i>
+                                            </div>
+                                            <div class="w-1/2 border-r">
+                                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1 "
+                                                    data-id="5"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="../images/Rectangle 7.png" alt="" class="course-img w-full">
+                                    <p class="my-6">جعبه مربعی شیشه ای شفاف</p>
+                                    <div class="rate flex text-gray-600 my-6">
+                                        <i class="fa-solid fa-star" data-id="1"></i>
+                                        <i class="fa-solid fa-star" data-id="2"></i>
+                                        <i class="fa-solid fa-star" data-id="3"></i>
+                                        <i class="fa-solid fa-star" data-id="4"></i>
+                                        <i class="fa-solid fa-star" data-id="5"></i>
+                                    </div>
+                                    <p class="py-6"><span>5</span>تومان</p>
+                                </div>
+                                <div class="product-4 product w-1/4 mx-2 relative">
+                                    <div class="result absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                            <div class="w-1/2 border-l">
+                                                <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                    data-id="6"></i>
+                                            </div>
+                                            <div class="w-1/2 border-r">
+                                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1 "
+                                                    data-id="6"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="../images/Rectangle 8.png" alt="" class=" course-img w-full">
+                                    <p class="my-6">دست ظروف سرامیکی کوچک</p>
+                                    <div class="rate flex text-gray-600 my-6">
+                                        <i class="fa-solid fa-star" data-id="1"></i>
+                                        <i class="fa-solid fa-star" data-id="2"></i>
+                                        <i class="fa-solid fa-star" data-id="3"></i>
+                                        <i class="fa-solid fa-star" data-id="4"></i>
+                                        <i class="fa-solid fa-star" data-id="5"></i>
+                                    </div>
+                                    <!-- <p class="py-6"><span>30000</span>تومان</p> -->
+                                    <p class="py-6"><span>6</span>تومان</p>
+                                </div>
+                                <div class="product-1 w-1/4 h-full mr-2 relative">
+                                    <div
+                                        class="civil-product-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+                                        <h3 class="text-xl font-semibold">دکوری</h3>
+                                        <p class="my-6 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                                            چاپ و
+                                            با استفاده از طراحان
+                                            گرافیک است.</p>
+                                        <input type="submit" value="دیدن همه "
+                                            class="border w-20 py-2 mt-5 cursor-pointer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-pic-2 my-10">
+                    <div class="civil-div h-full">
+                        <div class="civil-div-r w-1/2 h-full relative">
+                            <div
+                                class="ads-back w-5/6 h-4/6 bg-white bg-opacity-80 absolute left-0 top-1/2 -translate-y-1/2 mt-5">
+                                <div class="civil ads-back relative w-full h-full">
+                                    <div class="paraph absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                                        <h3 class="text-xl">ست رو تختی</h3>
+                                        <div class="price-div flex my-6">
+                                            <span>500,000 تومان</span>
+                                            <span class=" mr-10 text-xs translate-y-1 line-through">200,000,000
+                                                تومان</span>
+                                        </div>
+                                        <p class=" text-xs">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                                            با استفاده از
+                                            طراحان گرافیک است.</p>
+                                        <input type="submit" value="دیدن جزئیات"
+                                            class="text-sm mt-4 border border-black p-2 cursor-pointer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="civil div-l w-1/2">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="courser top-rating w-11/12 mx-auto block">
+                    <h3 class="text-xl mb-6">بالا ترین امتیاز ها</h3>
+                    <div class="top-rating-t h-1/3 flex ">
+                        <div class="product p1 w-1/3 flex ">
+
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 26.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="7"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="7"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>ظروف سینی</h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>4300400</span>تومان</p>
+                            </div>
+                        </div>
+                        <div class="product p2 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 27.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="8"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="8"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>کوسن صندلی</h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>30004440</span>تومان</p>
+                            </div>
+                        </div>
+                        <div class="product p3 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 28.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="9"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="9"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>لیوان کریستال </h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>34440000</span>تومان</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-rating-m h-1/3 flex my-4 ">
+                        <div class="product p1 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 29.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="10"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="10"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>ظرف تخم مرغ </h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>300004</span>تومان</p>
+                            </div>
+                        </div>
+                        <div class="product p2 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 33.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="11"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="11"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>جعبه بامبو کوچک</h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>430000</span>تومان</p>
+                            </div>
+                        </div>
+                        <div class="product p3 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 34.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="12"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="12"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>سبد کارد و چنگال فلزی</h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>300040</span>تومان</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-rating-b h-1/3 flex">
+                        <div class="product p1 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 30.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="13"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="13"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>فنجان سرامیکی </h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>304000</span>تومان</p>
+                            </div>
+                        </div>
+                        <div class="product p2 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 31.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="14"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="14"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>دستمال کتانی</h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>440000</span>تومان</p>
+                            </div>
+                        </div>
+                        <div class="product p3 w-1/3 flex">
+                            <div class="top-rate-pic p1-r w-1/2 relative">
+                                <img src="../images/Rectangle 32.png" alt="">
+                                <div class="result absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <div class="flex w-28 rounded-full bg-gray-300 bg-opacity-60">
+                                        <div class="w-1/2 border-l">
+                                            <i class="basket-icone hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3 float-left py-1"
+                                                data-id="15"></i>
+                                        </div>
+                                        <div class="w-1/2 border-r">
+                                            <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3  py-1"
+                                                data-id="15"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1-l w-1/2 flex flex-col justify-center items-center">
+                                <h4>بشقاب سنگی لعابدار</h4>
+                                <div class="rate flex text-gray-600 my-6">
+                                    <i class="fa-solid fa-star" data-id="1"></i>
+                                    <i class="fa-solid fa-star" data-id="2"></i>
+                                    <i class="fa-solid fa-star" data-id="3"></i>
+                                    <i class="fa-solid fa-star" data-id="4"></i>
+                                    <i class="fa-solid fa-star" data-id="5"></i>
+                                </div>
+                                <p class="py-6"><span>300600</span>تومان</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-input flex mx-auto my-20">
+                        <input type="submit" value="دیدن محصولات بیشتر"
+                            class="load-more-sub py-2 w-96 bg-gray-900 text-white mx-auto cursor-pointer">
+                    </div>
+                </div>
+                <div class="news-sign-in flex ">
+                    <div class="parag w-1/2 flex flex-col justify-center items-center">
+                        <p class="text-xl">برای خبرنامه ثبت نام کنید</p>
+                        <p class="text-xs">برای آخرین داستان ها و تبلیغات مشترک شوید</p>
+                    </div>
+                    <div class="inp w-1/2 flex items-center">
+                        <label for="newsletter" class=" bg-gray-900 text-white px-5 pt-2 border border-gray-900">
+                            <i class="fa-solid fa-envelope"></i>
+                        </label>
+                        <input type="email" id="newsletter" placeholder="ایمیل خود را وارد کنید"
+                            class="border border-gray-900 py-1 pr-2 w-72">
+                    </div>
+                </div>
+            </div>
+            <footer class="w-full bg bg-gray-900 text-white flex mt-10 p-16">
+                <div class="part-1 w-2/6 pl-10">
+                    <h3 class="pb-3 text-xl">تجهيزات شهري</h3>
+                    <p class="pb-3 opacity-40">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                    <p class="pb-3">تهران سعادت آباد خیابان صنوبر</p>
+                    <p class="pb-3">0333800660</p>
+                    <a href="mailto:arashmehrabadi@gmail.com" class="pb-3">arashmehrabadi@gmail.com</a>
+                    <div class="social-media flex justify-between pt-3">
+                        <i class="fa-brands fa-facebook-f cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram cursor-pointer"></i>
+                        <i class="fa-brands fa-youtube cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="part-2 w-1/6">
+                    <h3 class="pb-3 text-xl">خرید</h3>
+                    <p class="pb-3 opacity-40">خرید با کارت</p>
+                    <p class="pb-3 opacity-40">امکان انواع خرید</p>
+                    <p class=" opacity-40">مقایسه اجناس</p>
+                </div>
+                <div class="part-3 w-1/6">
+                    <h3 class="pb-3 text-xl">لینک های بیشتر</h3>
+                    <p class="pb-3 opacity-40">بلاگ</p>
+                    <p class="pb-3 opacity-40">مراکز خرید</p>
+                    <p class="  opacity-40">تازه ها</p>
+                </div>
+                <div class="part-4 w-2/6">
+                    <div class="part-4-top pb-3">
+                        <h3 class="text-xl">اخبار بلاگ</h3>
+                    </div>
+                    <div class="part-4-middle border-b pb-3 opacity-40">
+                        <p class="pb-3"><span class="text-xl">8</span> <span class="text-xs">اسفند</span></p>
+                        <p class="pb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.
+                        </p>
+                        <p>3 کامنت</p>
+                    </div>
+                    <div class="part-4-top pt-3 opacity-40">
+                        <p class="pb-3"><span class="text-xl">9</span> <span class="text-xs">اسفند</span></p>
+                        <p class="pb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.
+                        </p>
+                        <p>3 کامنت</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <p class="text-red-200"></p>
+        <script src="../js/home.js"></script>
+</body>
+
+</html>
+
+
+
+
+<p class="p-1.5"></p>
+
+

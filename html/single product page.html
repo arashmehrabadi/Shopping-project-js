@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single product page</title>
+    <link rel="stylesheet" href="../css/postcss/styles.css">
+    <link rel="stylesheet" href="../css/single product page.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class=".container">
+        <div class="main">
+            <header class="w-full">
+                <div class="civil-header flex flex-col w-11/12 mx-auto">
+                    <div class="top flex w-full border-b border-black py-6">
+                        <div class="top-r flex justify-start w-1/5">
+                            <a href="#">
+                                <h3 class="text-2xl">استودیو موودی</h3>
+                            </a>
+                        </div>
+                        <div class="top-l flex justify-end w-4/5">
+                            <input type="text" id="search" class="search-input ml-10 px-2 w-0"
+                                placeholder="جستجو کنید...">
+                            <label for="search"><i
+                                    class="hover:text-gray-500 fa-solid fa-magnifying-glass text-xl pl-3 "></i></label>
+                            <i class="hover:text-gray-500 fa-solid fa-user text-xl px-3"></i>
+                            <div class="basket-shopping show-hide block relative">
+                                <i class="hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3"></i>
+                                <span
+                                    class="w-4 h-4 bg-red-700 rounded-full absolute flex justify-center items-center text-white text-xs -translate-y-3 -translate-x-1"></span>
+                                <div class="icon-basket-result absolute w-96 h-96 left-0 bg-gray-300 overflow-y-scroll">
+                                    <div class="civil relative">
+                                        <div class="top translate-y-6"></div>
+                                        <div class="down absolute top-0 w-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fav-shopping hide-show block relative">
+                                <!-- <i class="hover:text-yellow-500 fa-solid fa-basket-shopping text-xl px-3"></i> -->
+                                <i class="hover:text-red-700 fa-solid fa-heart text-xl pr-3"></i>
+                                <span
+                                    class="w-4 h-4 bg-red-700 rounded-full absolute flex justify-center items-center text-white text-xs -translate-y-3 -translate-x-1"></span>
+                                <div class="icon-fav-result absolute w-96 left-0 bg-gray-300 h-96 overflow-y-scroll">
+                                    <div class="civil relative">
+                                        <div class="top"></div>
+                                        <div class="down "></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle border-b border-black py-6">
+                        <ul class="flex justify-around">
+                            <li class="hover:font-bold cursor-pointer ">خانه</li>
+                            <li class="hover:font-bold cursor-pointer ">فروشگاه</li>
+                            <li class="hover:font-bold cursor-pointer ">تزئینی</li>
+                            <li class="hover:font-bold cursor-pointer ">برند</li>
+                            <li class="hover:font-bold cursor-pointer ">صفحات</li>
+                            <li class="hover:font-bold cursor-pointer ">درباره ما</li>
+                            <li class="hover:font-bold cursor-pointer ">اخبار</li>
+                            <li class="hover:font-bold cursor-pointer ">تماس با ما</li>
+                        </ul>
+                    </div>
+                    <div class="down flex justify-around pt-6 pb-3">
+                        <div class="down-r">
+                            <i class="fa-solid fa-headset text-gray-600"></i>
+                            <span class="text-xs text-gray-500">پشتیبانی 7/24</span>
+                        </div>
+                        <div class="down-m">
+                            <i class="fa-solid fa-money-check-dollar text-gray-600"></i>
+                            <span class="text-xs text-gray-500">ضمانت بازگشت وجه</span>
+                        </div>
+                        <div class="down-l">
+                            <i class="fa-solid fa-truck text-gray-600"></i>
+                            <span class="text-xs text-gray-500">ارسال رایگان</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="home-main flex flex-col z-0 w-full mt-10">
+                <div class="w-11/12 mx-auto flex">
+                    <div class="images w-2/3">
+                        <div class="top w-full flex mb-4">
+                            <div class="top-right w-1/2 ml-2">
+                                <img src="../images/Rectangle 82.png" alt="" class="bag-img">
+                            </div>
+                            <div class="top-left w-1/2 mr-2">
+                                <img src="../images/Rectangle 83.png" alt="">
+                            </div>
+                        </div>
+                        <div class="down w-full">
+                            <img src="../images/Rectangle 97.png" alt="">
+                        </div>
+                    </div>
+                    <div class="descriptions w-1/3 mr-4">
+                        <h3 class=" text-xl font-semibold">ست رو تختی</h3>
+                        <p class="price my-2 font-semibold"><span>39000</span>تومان</p>
+                        <p class="color-desc my-2">به رنگ <span>...</span></p>
+                        <div
+                            class="product-color my-2  w-20 h-28 flex justify-center items-center">
+                            <img src="../images/Rectangle 82.png" alt="" class="p-2 w-full">
+                        </div>
+                        <div class="color my-2">
+                            <span class="blue-span bg-blue-500 cursor-pointer "> </span>
+                            <span class="red-span bg-red-500 cursor-pointer"></span>
+                            <span class="gray-span bg-gray-500 cursor-pointer"></span>
+                            <span class="orange-span bg-orange-500 cursor-pointer"></span>
+                        </div>
+                        <form action="">
+                            <!-- <label for="">انتخاب سایز :</label> -->
+                            <select name="" id="" class="select-option w-full border p-2">
+                                <option value="0">انتخاب سایز</option>
+                                <option value="1" class="num-1">1</option>
+                                <option value="2" class="num-2">2</option>
+                                <option value="3" class="num-3">3</option>
+                                <option value="4" class="num-4">4</option>
+                            </select>
+                            <button class="text-white  bg-gray-900 w-full my-4 p-2 font-semibold">افزودن به سبد خرید</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <footer class="w-full bg bg-gray-900 text-white flex mt-10 p-16">
+                <div class="part-1 w-2/6 pl-10">
+                    <h3 class="pb-3 text-xl">تجهيزات شهري</h3>
+                    <p class="pb-3 opacity-40">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است.
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                    <p class="pb-3">تهران سعادت آباد خیابان صنوبر</p>
+                    <p class="pb-3">0333800660</p>
+                    <a href="mailto:arashmehrabadi@gmail.com" class="pb-3">arashmehrabadi@gmail.com</a>
+                    <div class="social-media flex justify-between pt-3">
+                        <i class="fa-brands fa-facebook-f cursor-pointer"></i>
+                        <i class="fa-brands fa-twitter cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram cursor-pointer"></i>
+                        <i class="fa-brands fa-youtube cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="part-2 w-1/6">
+                    <h3 class="pb-3 text-xl">خرید</h3>
+                    <p class="pb-3 opacity-40">خرید با کارت</p>
+                    <p class="pb-3 opacity-40">امکان انواع خرید</p>
+                    <p class=" opacity-40">مقایسه اجناس</p>
+                </div>
+                <div class="part-3 w-1/6">
+                    <h3 class="pb-3 text-xl">لینک های بیشتر</h3>
+                    <p class="pb-3 opacity-40">بلاگ</p>
+                    <p class="pb-3 opacity-40">مراکز خرید</p>
+                    <p class="  opacity-40">تازه ها</p>
+                </div>
+                <div class="part-4 w-2/6">
+                    <div class="part-4-top pb-3">
+                        <h3 class="text-xl">اخبار بلاگ</h3>
+                    </div>
+                    <div class="part-4-middle border-b pb-3 opacity-40">
+                        <p class="pb-3"><span class="text-xl">8</span> <span class="text-xs">اسفند</span></p>
+                        <p class="pb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.
+                        </p>
+                        <p>3 کامنت</p>
+                    </div>
+                    <div class="part-4-top pt-3 opacity-40">
+                        <p class="pb-3"><span class="text-xl">9</span> <span class="text-xs">اسفند</span></p>
+                        <p class="pb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                            گرافیک است.
+                        </p>
+                        <p>3 کامنت</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- <p class="p-1.5">p</p> -->
+        <!-- <div class="civil-shopping-cart flex mx-1 border border-white">
+            <div class="cart-img w-1/3 h-full my-auto flex justify-center items-center">
+                <img src="${cInfo.image}">
+            </div>
+            <div class="cart-desc w-2/3 block mr-3 mt-5">
+                <div class="title ">
+                    <p class="my-6 text-xl">${cInfo.title}</p>
+                </div>
+                <div class="price flex relative">
+                    
+                    <p><span class="py-6">${cInfo.price}</span>تومان </p>
+                    <span
+                        class="flex justify-center items-center absolute left-5 translate-y-7 remove-course w-6 h-6 rounded-full text-gray-300 cursor-pointer z-20"
+                        data-id="${cInfo.id}">X</span>
+                </div>
+            </div>
+        </div> -->
+        <script src="../js/single product page-2.js"></script>
+</body>
+
+</html>
+

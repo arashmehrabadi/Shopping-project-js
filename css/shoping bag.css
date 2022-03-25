@@ -1,0 +1,44 @@
+@font-face {
+    font-family: iran-sans;
+    src: url(../fonts/IRANSans\(FaNum\).ttf);
+}
+body{
+    font-family: iran-sans;
+}
+.civil-header .top .top-l{
+    transition: all .5s;
+}
+.search-input{
+    transition: all .5s;
+}
+#search{
+    /* width: 1500px; */
+    transition: all .5s;
+}
+.result,
+.icon-basket-result,
+.icon-fav-result
+{
+    display: none;
+
+}
+.result i {
+    cursor: pointer;
+}
+.product-2:hover .result,
+.product-3:hover .result,
+.product-4:hover .result
+{
+    display: flex;
+}
+header div.basket-shopping:hover .icon-basket-result{
+    display: flex;
+    flex-direction: column;
+}
+header div.fav-shopping:hover .icon-fav-result{
+    display: flex;
+    flex-direction: column;
+}    
+.remove-course{
+    background-color: red;
+}

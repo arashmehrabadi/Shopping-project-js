@@ -1,0 +1,104 @@
+@font-face {
+    font-family: iran-sans;
+    src: url(../fonts/IRANSans\(FaNum\).ttf);
+}
+body{
+    font-family: iran-sans;
+}
+/* header{
+    transition: all .5s;
+} */
+/* .civil-header .top{
+    transition: all .5s;
+} */
+.civil-header .top .top-l{
+    transition: all .5s;
+}
+.search-input{
+    transition: all .5s;
+}
+#search{
+    /* width: 1500px; */
+    transition: all .5s;
+}
+
+.fa-solid.fa-star{
+    cursor: pointer;
+}
+.large-pic{
+    background-color: #DBD0CCCC;
+}
+.large-image-description p{
+    color: #A86A3D;
+}
+.product-top-right{
+    background-color: #FAFAFA;
+}
+.product-top-right img{
+    height:100%;
+}
+.product-top-left{
+    background-color: #EAE9E7;
+}
+.product-down .product-1{
+    background-color: #00000066;
+    height: 520px;
+}
+.large-pic-2{
+    background-image: url(../images/Rectangle\ 13.png) ;
+    height: 500px;
+    /* width: 100%; */
+    background-position:center;
+    
+}
+.price-div span{
+    color: #A86A3D;
+}
+/* .load-more-sub{
+    background-color: #323334;
+    color: #fff;
+
+} */
+
+.result,
+.icon-basket-result,
+.icon-fav-result
+{
+    display: none;
+
+}
+.result i:not(.text-yellow-600) {
+    cursor: pointer;
+}
+.product-2:hover .result,
+.product-3:hover .result,
+.product-4:hover .result
+{
+    display: flex;
+}
+header div.basket-shopping:hover .icon-basket-result{
+    display: flex;
+    flex-direction: column;
+}
+header div.fav-shopping:hover .icon-fav-result{
+    display: flex;
+    flex-direction: column;
+}
+.top-rate-pic:hover .result{
+    display: flex;
+}
+
+.remove-course{
+    background-color: red;
+}
+.product img,
+.top-rating img{
+    cursor: pointer;
+}
+/* .hidden{
+    display: none;
+} */
+
+.hidden{
+display:none;
+}
