@@ -78,6 +78,7 @@
 let courserList = document.querySelector('.courser')
 // let topRateList = document.querySelector('.coursers')
 let iconBasketResult = document.querySelector('.icon-basket-result .top')
+let iconBasketResults = document.querySelectorAll('.icon-basket-result .top')
 let iconBasketResultPrice = document.querySelector('.icon-basket-result .down')
 // console.log(iconBasketResultPrice.parentElement);
 let basketShoppingDiv = document.querySelector('.show-hide')
@@ -245,7 +246,7 @@ class Product {
             // e.classList.remove('cursor-not-allowed')
             // // e.classList.add('cursor-pointer')
             // e.classList.remove('text-yellow-500')
-            
+
             let idCourse = e.getAttribute('data-id')
             this.removeFromLS(idCourse)
             this.courserCounter()
@@ -359,7 +360,7 @@ class Product {
         let targetNumber = Number(target)
         let totoalTargetNumber = Number(totoalTarget)
         // let total2 = 0
-        console.log(totoalTarget);
+        // console.log(totoalTarget);
         // let arrayLS = JSON.parse(localStorage.getItem('course'))
         // arrayLS.forEach(element => {
         // let elementPrice = Number(element.price)
@@ -367,7 +368,7 @@ class Product {
         let total2 = totoalTargetNumber - targetNumber
         // total += elementPrice
         // return total2
-        console.log(total2);
+        // console.log(total2);
         // });
         let priceDiv = `
             <div class=" mx-1 border border-white pr-1 ">
@@ -386,7 +387,7 @@ class Product {
 
     }
     hoverIconProducts(e) {
-        e.classList.add('text-yellow-600', 'cursor-not-allowed')
+        e.classList.add('text-yellow-600', 'cursor-not-allowed', 'clicked')
         e.classList.remove('basket-icone')
         console.log('clicked');
         // addToShoppingCarts.forEach(element => {
@@ -494,7 +495,7 @@ stars.forEach(star => {
 });
 
 addToShoppingCarts.forEach(element => {
-    element.addEventListener('mouseup',(e)=>{
+    element.addEventListener('mouseup', (e) => {
         product.hoverIconProducts(e.target)
     })
 });
@@ -614,6 +615,46 @@ function getFromStorage2() {
     return favArray
 }
 
-document.addEventListener('click', (e) => {
-    console.log(e.target);
+// document.addEventListener('click', (e) => {
+//     console.log(e.target);
+// })
+
+
+// test code
+iconBasketResult.addEventListener('click', test)
+
+function test(e) {
+    let targetAttribute = e.target.getAttribute('data-id')
+    console.log(targetAttribute);
+    products.forEach(element => {
+        let getAttribute = element.children[0].children[0].children[0].children[0].getAttribute('data-id')
+        console.log(getAttribute);
+        let basketIconClass = element.children[0].children[0].children[0].children[0]
+
+        if (targetAttribute == getAttribute) {
+            basketIconClass.classList.remove('cursor-not-allowed')
+            basketIconClass.classList.remove('text-yellow-600')
+            basketIconClass.classList.add('basket-icone')
+        }
+    });
+}
+
+// console.log(JSON.parse(localStorage.getItem('course'))[0].id);
+// JSON.parse(localStorage.getItem('course')).forEach(element => {
+//     console.log(element.id);
+// });
+document.addEventListener('DOMContentLoaded', () => {
+    let LSOb = JSON.parse(localStorage.getItem('course'))
+    LSOb.forEach(element => {
+        let getLSAttribute = element.id
+        products.forEach(element => {
+            let getProductAttribute = element.children[0].children[0].children[0].children[0].getAttribute('data-id')
+            let basketIconClass = element.children[0].children[0].children[0].children[0]
+            if (getLSAttribute == getProductAttribute) {
+                
+                basketIconClass.classList.add('cursor-not-allowed', 'text-yellow-600')
+            }
+        });
+    });
+
 })

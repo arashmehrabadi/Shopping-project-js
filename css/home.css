@@ -23,7 +23,7 @@ body{
 }
 
 .fa-solid.fa-star{
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .large-pic{
     background-color: #DBD0CCCC;
