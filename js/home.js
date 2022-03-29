@@ -1,86 +1,7 @@
-// let product = document.querySelector('.product-2')
-// let result = document.querySelector('.result')
-// console.log(result);
-// class Product{
-//     productHoverIn(){
-//         let resultHover=`
-//             <div class="flex w-44 rounded-full bg-gray-600 bg-opacity-60">
-//                 <div class="w-1/2 border-l">
-//                     <i class="hover:text-gray-500 fa-solid fa-magnifying-glass text-xl pl-3 "></i>
-//                     </div>
-//                 <div class="w-1/2 border-r">
-//                     <i class="hover:text-gray-500 fa-solid fa-user text-xl px-3"></i>
-//                 </div>
-//             </div>
-//         `
-//         result.insertAdjacentHTML('afterbegin',resultHover)
-//     }
-//     productHoverOut(){
-//        let resultHoverO=''
-//        result.insertAdjacentHTML('afterbegin',resultHoverO)
-//     }
-// }
-// let products=new Product()
-
-// product.addEventListener('mouseover',()=>{
-//     console.log('hi');
-//     products.productHoverIn()
-// })
-// product.addEventListener('mouseOut',()=>{
-//     console.log('hi');
-//     products.productHoverOut()
-// })
-
-
-
-
-// let bagShop = document.querySelector('header .fa-basket-shopping')
-// let iconBasketResult = document.querySelector('.icon-basket-result')
-// // console.log(bagShop);
-// class Header {
-//     basketIn(){
-//         let bagSohpDiv;
-//         bagSohpDiv =
-//         `
-//         <div class="w-96 bg-blue-500 h-screen icon-basket-result block">
-//             <ul>
-//                 <li>
-//                     parag
-//                 </li>            
-//             </ul>
-//         </div>
-//         `
-//         iconBasketResult.insertAdjacentHTML('afterbegin',bagSohpDiv)
-//         iconBasketResult.classList.add('block')
-//     }
-//     basketOut(e){
-//         if(e.classList.contains('icon-basket-result')){
-//             e.parentElement.classList.add('hidden')
-//         }
-//         console.log(e.classList);
-//     }
-// }
-
-// bagShop.addEventListener('mouseenter' , ()=>{
-//     header.basketIn()
-//     iconBasketResult.classList.add('block')
-
-// }) 
-// iconBasketResult.addEventListener('mouseout' , (e)=>{
-//     header.basketOut(e.target)
-// }) 
-
-// let header = new Header()
-
-
-
-// let cart = document.querySelectorAll('.product')
 let courserList = document.querySelector('.courser')
-// let topRateList = document.querySelector('.coursers')
 let iconBasketResult = document.querySelector('.icon-basket-result .top')
 let iconBasketResults = document.querySelectorAll('.icon-basket-result .top')
 let iconBasketResultPrice = document.querySelector('.icon-basket-result .down')
-// console.log(iconBasketResultPrice.parentElement);
 let basketShoppingDiv = document.querySelector('.show-hide')
 
 let addToShoppingCart = document.querySelector('.basket-icone')
@@ -89,13 +10,9 @@ let addToShoppingCarts = document.querySelectorAll('.basket-icone')
 let courserCounterDiv = document.querySelector('.basket-shopping span')
 
 
-
-
 let products = document.querySelectorAll('.product')
 let stars = document.querySelectorAll(".product .fa-solid.fa-star");
 let rates = document.querySelectorAll('.rate')
-
-
 
 
 let iconFavResult = document.querySelector('.icon-fav-result .top')
@@ -103,19 +20,8 @@ let favCounterDiv = document.querySelector('.fav-shopping  span')
 let favShoppingDiv = document.querySelector('.hide-show')
 
 
-
-
-
 let search = document.querySelector('.fa-magnifying-glass')
 let searchInput = document.querySelector('#search')
-
-// console.log(products);
-// courserCounterDiv.classList.add('hidden')
-
-
-
-
-
 
 
 class FavoritDiv {
@@ -123,7 +29,6 @@ class FavoritDiv {
         if (e.classList.contains('fa-heart')) {
             let cart = e.parentElement.parentElement.parentElement.parentElement
             this.getCourseInfo(cart)
-            // console.log(cart);
         }
     }
     getCourseInfo(courseInfo) {
@@ -131,7 +36,7 @@ class FavoritDiv {
             image: courseInfo.querySelector('.course-img').src,
             title: courseInfo.querySelector('.product p').textContent,
             price: courseInfo.querySelector('.product span').textContent,
-            id: courseInfo.querySelectorAll('i')[1].getAttribute('data-id')
+            id: courseInfo.querySelectorAll('i')[1].getAttribute('data-id'),
         }
         console.log(course);
         this.addToCart(course)
@@ -154,9 +59,7 @@ class FavoritDiv {
     }
     removeDivShoppingCart(e) {
         if (e.classList.contains('remove-course')) {
-            // console.log(e.classList);
             e.parentElement.parentElement.parentElement.remove()
-            // course = e.parentElement.parentElement.parentElement
             let idCourse = e.getAttribute('data-id')
             this.removeFromLS(idCourse)
             this.favCounter()
@@ -171,7 +74,6 @@ class FavoritDiv {
         });
         localStorage.setItem('fav', JSON.stringify(courseLS))
         this.hideShowFavResultDiv()
-        // console.log(id);
     }
     favCounter() {
         if (JSON.stringify(JSON.parse(localStorage.getItem('fav')).length) == 0) {
@@ -183,12 +85,9 @@ class FavoritDiv {
     }
     hideShowFavResultDiv() {
         if (JSON.stringify(JSON.parse(localStorage.getItem('fav')).length) == 0) {
-            // courserCounterDiv.classList.add('hidden')
             favShoppingDiv.classList.remove('fav-shopping')
         } else {
-            // courserCounterDiv.classList.remove('hidden')
             favShoppingDiv.classList.add('fav-shopping')
-            // courserCounterDiv.innerHTML = JSON.stringify(JSON.parse(localStorage.getItem('course')).length)
         }
     }
 }
@@ -199,13 +98,9 @@ class FavoritDiv {
 
 class Product {
     buyCourse(e) {
-        // e.preventDefault()
         if (e.classList.contains('basket-icone')) {
             let cart = e.parentElement.parentElement.parentElement.parentElement
             this.getCourseInfo(cart)
-
-
-            // console.log(cart);
         }
     }
     getCourseInfo(courseInfo) {
@@ -213,11 +108,10 @@ class Product {
             image: courseInfo.querySelector('.course-img').src,
             title: courseInfo.querySelector('.product p').textContent,
             price: courseInfo.querySelector('.product span').textContent,
-            id: courseInfo.querySelectorAll('i')[0].getAttribute('data-id')
+            id: courseInfo.querySelectorAll('i')[0].getAttribute('data-id'),
         }
 
-        // console.log(course.price);
-        this.totalPrice(course)
+        this.totalPrice()
         this.addToCart(course)
         this.saveToLocalStorage(course)
     }
@@ -230,6 +124,41 @@ class Product {
         courseArray.push(course)
         let strCourse = JSON.stringify(courseArray)
         localStorage.setItem('course', strCourse)
+        console.log('hehe');
+
+    }
+    loadedStorage() {
+        if (localStorage.length == 0) {
+            console.log("object");
+            let courseArray
+            if (localStorage.getItem('course')) {
+                courseArray = JSON.parse(localStorage.getItem('course'))
+            } else {
+                courseArray = []
+            }
+            let strCourse = JSON.stringify(courseArray)
+            localStorage.setItem('course', strCourse)
+
+
+            let favArray
+            if (localStorage.getItem('fav')) {
+                favArray = JSON.parse(localStorage.getItem('fav'))
+            } else {
+                favArray = []
+            }
+            let strCoursee = JSON.stringify(courseArray)
+            localStorage.setItem('fav', strCoursee)
+
+            let arrayRate
+            if (localStorage.getItem('rated')) {
+                arrayRate = JSON.parse(localStorage.getItem('rated'))
+            } else {
+                arrayRate = []
+            }
+            let strCourseee = JSON.stringify(arrayRate)
+            localStorage.setItem('rated', strCourseee)
+
+        }
 
     }
     loadContentcart() {
@@ -240,13 +169,7 @@ class Product {
     }
     removeDivShoppingCart(e) {
         if (e.classList.contains('remove-course')) {
-            // console.log(e.getAttribute('data-id'));
             e.parentElement.parentElement.parentElement.remove()
-            // course = e.parentElement.parentElement.parentElement
-            // e.classList.remove('cursor-not-allowed')
-            // // e.classList.add('cursor-pointer')
-            // e.classList.remove('text-yellow-500')
-
             let idCourse = e.getAttribute('data-id')
             this.removeFromLS(idCourse)
             this.courserCounter()
@@ -261,27 +184,21 @@ class Product {
         });
         localStorage.setItem('course', JSON.stringify(courseLS))
         this.showHideCourseResultDiv()
-        // console.log(id);
     }
     courserCounter() {
         if ((JSON.parse(localStorage.getItem('course')).length) == 0) {
             courserCounterDiv.classList.add('hidden')
-            // iconBasketResult.classList.add('hidden')
 
         } else {
             courserCounterDiv.classList.remove('hidden')
-            // iconBasketResult.classList.remove('hidden')
             courserCounterDiv.innerHTML = (JSON.parse(localStorage.getItem('course')).length)
         }
     }
     showHideCourseResultDiv() {
         if ((JSON.parse(localStorage.getItem('course')).length) == 0) {
-            // courserCounterDiv.classList.add('hidden')
             basketShoppingDiv.classList.remove('basket-shopping')
         } else {
-            // courserCounterDiv.classList.remove('hidden')
             basketShoppingDiv.classList.add('basket-shopping')
-            // courserCounterDiv.innerHTML = JSON.stringify(JSON.parse(localStorage.getItem('course')).length)
         }
     }
     rate(e) {
@@ -293,56 +210,23 @@ class Product {
         if (e.classList.contains('text-yellow-600')) {
             for (let i = lastChild - 1; i > that - 1; i--) {
                 children[i].classList.remove("text-yellow-600");
-                // console.log(children[i]);
             }
         } else {
             for (let i = firstChild - 1; i <= that - 1; i++) {
                 children[i].classList.add("text-yellow-600");
-                // console.log(children[i]);
             }
         }
 
     }
-    loadedStorage() {
-        if (localStorage.length == 0) {
-            console.log("object");
-            // let arrayLss = []
-            // let strArrLss = JSON.stringify(arrayLss)
-            // localStorage.setItem(['course',strArrLss])
-            // let courseArray = getFromStorage()
-            let courseArray
-            if (localStorage.getItem('course')) {
-                courseArray = JSON.parse(localStorage.getItem('course'))
-            } else {
-                courseArray = []
-            }
-            // courseArray.push(course)
-            let strCourse = JSON.stringify(courseArray)
-            localStorage.setItem('course', strCourse)
-            let favArray
-            if (localStorage.getItem('fav')) {
-                favArray = JSON.parse(localStorage.getItem('fav'))
-            } else {
-                favArray = []
-            }
-            // courseArray.push(course)
-            let strCoursee = JSON.stringify(courseArray)
-            localStorage.setItem('fav', strCoursee)
 
-        }
-
-    }
     totalPrice() {
         let arrayLS = JSON.parse(localStorage.getItem('course'))
         let total = 0
-        // console.log(JSON.parse(localStorage.getItem('course')));
         arrayLS.forEach(element => {
             let elementPrice = Number(element.price)
             total += elementPrice
-            // elementPrice=0
             return total
         });
-        // console.log(total);
         let priceDiv = `
             <div class=" mx-1 border border-white">
                 <p>مجموع قیمت : <span>${total}</span> تومان</p>
@@ -350,8 +234,6 @@ class Product {
         
         `
         total = '0'
-        // iconBasketResultPrice.innerHTML =`مجموع قیمت : ${total} تومان`
-        // iconBasketResultPrice.insertAdjacentHTML("afterbegin", priceDiv)
         iconBasketResultPrice.innerHTML = priceDiv
     }
     removeTotal(e) {
@@ -359,102 +241,21 @@ class Product {
         let target = e.parentElement.firstElementChild.firstElementChild.textContent
         let targetNumber = Number(target)
         let totoalTargetNumber = Number(totoalTarget)
-        // let total2 = 0
-        // console.log(totoalTarget);
-        // let arrayLS = JSON.parse(localStorage.getItem('course'))
-        // arrayLS.forEach(element => {
-        // let elementPrice = Number(element.price)
-        // let total =
         let total2 = totoalTargetNumber - targetNumber
-        // total += elementPrice
-        // return total2
-        // console.log(total2);
-        // });
         let priceDiv = `
             <div class=" mx-1 border border-white pr-1 ">
                 <p class="-translate-x-1">مجموع قیمت : <span>${total2}</span> تومان</p>
             </div>
         
         `
-        // iconBasketResultPrice.innerHTML =`مجموع قیمت : ${total} تومان`
-        // iconBasketResultPrice.insertAdjacentHTML("afterbegin", priceDiv)
         iconBasketResultPrice.innerHTML = priceDiv
-
-
-        // console.log(totoalTarget);
-
-
-
     }
     hoverIconProducts(e) {
         e.classList.add('text-yellow-600', 'cursor-not-allowed', 'clicked')
         e.classList.remove('basket-icone')
         console.log('clicked');
-        // addToShoppingCarts.forEach(element => {
-        //     console.log(element);
-
-        // });
     }
-    // hoverIconProductOut(e){
-    //     e.classList.remove('text-yellow-500')
-    //     console.log('unhovered');
-    //     // addToShoppingCarts.forEach(element => {
-    //     //     console.log(element);
-    //     // });
-    // }
-    // totalPrice2() {
-    //     let arrayLS = JSON.parse(localStorage.getItem('course'))
-    //     let total = 0
-    //     arrayLS.forEach(element => {
-    //         let elementPrice = Number(element.price)
-    //         total -= elementPrice
-    //         total += elementPrice
-    //         return total
-    //     });
-    //     console.log(total);
-    //     let priceDiv = `
-    //         <div class=" mx-1 border border-white">
-    //             <p>مجموع قیمت : ${total} تومان</p>
-    //         </div>
-
-    //     `
-    //     // iconBasketResultPrice.innerHTML =`مجموع قیمت : ${total} تومان`
-    //     iconBasketResult.insertAdjacentHTML("afterbegin", priceDiv)
-    // }
 }
-
-
-
-
-// console.log(arrayLS[0].price);
-// for (let i = 0; i < arrayLS.length; i++) {
-//     let elementPrice = arrayLS[i].price
-//     console.log(Number(elementPrice));
-//     // let arrray = {
-//     //     pricee: `${elementPrice}`
-//     // }
-//     // console.log(arrray);
-//     // console.log(arrray.reduce((a, b) => a + b));
-
-//     // iconBasketResultPrice.innerHTML= `${elementPrice}`
-
-
-
-//     // let priceArray = JSON.parse(arrayLS[i].price)
-//     // console.log(priceArray);
-
-// }
-// console.log(arrayLS);
-// console.log(arrayLS.reduce((a, b) => a + b));
-
-// console.log(arrayLS[0]);
-
-
-
-
-
-
-
 courserList.addEventListener('mousedown', (e) => {
     product.buyCourse(e.target)
     product.courserCounter()
@@ -475,9 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
     product.showHideCourseResultDiv()
     favoritDiv.hideShowFavResultDiv()
     product.totalPrice()
-    // product.saveToLocalStorage()
-    // favoritDiv.saveToLocalStorage()
-
 })
 iconBasketResult.addEventListener('click', (e) => {
     product.removeTotal(e.target)
@@ -499,36 +297,12 @@ addToShoppingCarts.forEach(element => {
         product.hoverIconProducts(e.target)
     })
 });
-// addToShoppingCarts.forEach(element => {
-//     element.addEventListener('mouseleave',(e)=>{
-//         product.hoverIconProductOut(e.target)
-//     })
-// });
-// document.addEventListener('click', (e) => {
-//     product.removeTotal(e.target)
-// })
-// console.log(localStorage.length);
-
-
-
-
-
-
-
-
-
-
-
 search.addEventListener('click', () => {
-    // console.log('hi');
     searchInput.classList.remove('w-0')
     searchInput.classList.add('w-full')
-    // console.log('hi');
 })
 
 searchInput.addEventListener('blur', () => {
-    // console.log('hi');
-    // console.log('hi');
     searchInput.classList.remove('w-full')
     searchInput.classList.add('w-0')
 })
@@ -615,12 +389,6 @@ function getFromStorage2() {
     return favArray
 }
 
-// document.addEventListener('click', (e) => {
-//     console.log(e.target);
-// })
-
-
-// test code
 iconBasketResult.addEventListener('click', test)
 
 function test(e) {
@@ -638,11 +406,6 @@ function test(e) {
         }
     });
 }
-
-// console.log(JSON.parse(localStorage.getItem('course'))[0].id);
-// JSON.parse(localStorage.getItem('course')).forEach(element => {
-//     console.log(element.id);
-// });
 document.addEventListener('DOMContentLoaded', () => {
     let LSOb = JSON.parse(localStorage.getItem('course'))
     LSOb.forEach(element => {
@@ -651,10 +414,62 @@ document.addEventListener('DOMContentLoaded', () => {
             let getProductAttribute = element.children[0].children[0].children[0].children[0].getAttribute('data-id')
             let basketIconClass = element.children[0].children[0].children[0].children[0]
             if (getLSAttribute == getProductAttribute) {
-                
+
                 basketIconClass.classList.add('cursor-not-allowed', 'text-yellow-600')
             }
         });
     });
 
+})
+
+stars.forEach(star => {
+    star.addEventListener('click', (e) => {
+        let productAttribute = e.target.parentElement.parentElement.firstElementChild.firstElementChild.firstElementChild.firstElementChild.getAttribute('data-id')
+        let rateAttribute = e.target.getAttribute('data-id')
+        let getRateID = {
+            productAttribute: productAttribute,
+            rateAttribute: rateAttribute
+        }
+        localStorage.getItem('rated')
+        let arrayRate
+        if (localStorage.getItem('rated')) {
+            arrayRate = JSON.parse(localStorage.getItem('rated'))
+            console.log(arrayRate);
+        } else {
+            arrayRate = []
+        }
+        arrayRate.push(getRateID)
+        localStorage.setItem('rated', JSON.stringify(arrayRate))
+    })
+});
+document.addEventListener('DOMContentLoaded', () => {
+    let LSRate = JSON.parse(localStorage.getItem('rated'))
+    rates.forEach(rate => {
+        LSRate.forEach(lSRate => {
+            products.forEach(product => {
+                let firstChild = rate.firstElementChild.getAttribute('data-id')
+                let lastChild = rate.lastElementChild.getAttribute('data-id')
+
+
+                let thatAttribute = lSRate.rateAttribute
+                let LSProductAttribute = lSRate.productAttribute
+
+                let productAttribute = product.children[0].firstElementChild.firstElementChild.firstElementChild.getAttribute('data-id')
+                let productAttributeParrent = product.children[3].children
+                if (productAttribute == LSProductAttribute) {
+                    for (let i = lastChild - 1; i > thatAttribute - 1; i--) {
+                        productAttributeParrent[i].classList.remove("text-yellow-600");
+                    }
+                }
+                if (productAttribute == LSProductAttribute) {
+                    for (let i = firstChild - 1; i <= thatAttribute - 1; i++) {
+
+                        productAttributeParrent[i].classList.add("text-yellow-600");
+                    }
+                }
+            });
+
+        });
+
+    });
 })
