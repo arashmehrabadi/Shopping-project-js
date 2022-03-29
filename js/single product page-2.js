@@ -46,9 +46,7 @@ class FavoritDiv {
     }
     removeDivShoppingCart(e) {
         if (e.classList.contains('remove-course')) {
-            // console.log(e.classList);
             e.parentElement.parentElement.parentElement.remove()
-            // course = e.parentElement.parentElement.parentElement
             let idCourse = e.getAttribute('data-id')
             this.removeFromLS(idCourse)
             this.favCounter()
@@ -63,7 +61,6 @@ class FavoritDiv {
         });
         localStorage.setItem('fav', JSON.stringify(courseLS))
         this.hideShowFavResultDiv()
-        // console.log(id);
     }
     favCounter() {
         if (JSON.stringify(JSON.parse(localStorage.getItem('fav')).length) == 0) {
@@ -75,12 +72,9 @@ class FavoritDiv {
     }
     hideShowFavResultDiv() {
         if (JSON.stringify(JSON.parse(localStorage.getItem('fav')).length) == 0) {
-            // courserCounterDiv.classList.add('hidden')
             favShoppingDiv.classList.remove('fav-shopping')
         } else {
-            // courserCounterDiv.classList.remove('hidden')
             favShoppingDiv.classList.add('fav-shopping')
-            // courserCounterDiv.innerHTML = JSON.stringify(JSON.parse(localStorage.getItem('course')).length)
         }
     }
 }
@@ -98,7 +92,6 @@ class Product {
             id: courseInfo.querySelectorAll('i')[0].getAttribute('data-id')
         }
 
-        // console.log(course.price);
         this.totalPrice(course)
         this.addToCart(course)
         this.saveToLocalStorage(course)
@@ -118,17 +111,13 @@ class Product {
         courseLS.forEach(cInfo => {
             shoppingCartDiv(cInfo)
         });
-        // console.log(courseLS);
     }
     removeDivShoppingCart(e) {
         if (e.classList.contains('remove-course')) {
-            // console.log(e.getAttribute('data-id'));
             e.parentElement.parentElement.parentElement.remove()
-            // course = e.parentElement.parentElement.parentElement
             let idCourse = e.getAttribute('data-id')
             this.removeFromLS(idCourse)
             this.courserCounter()
-            // console.log('by');
         }
     }
     removeFromLS(id) {
@@ -140,29 +129,20 @@ class Product {
         });
         localStorage.setItem('course', JSON.stringify(courseLS))
         this.showHideCourseResultDiv()
-        // console.log(id);
     }
     courserCounter() {
         if ((JSON.parse(localStorage.getItem('course')).length) == 0) {
             courserCounterDiv.classList.add('hidden')
-            // iconBasketResult.classList.add('hidden')
-            console.log('1');
-
         } else {
             courserCounterDiv.classList.remove('hidden')
-            // iconBasketResult.classList.remove('hidden')
-            console.log('2');
             courserCounterDiv.innerHTML = (JSON.parse(localStorage.getItem('course')).length)
         }
     }
     showHideCourseResultDiv() {
         if ((JSON.parse(localStorage.getItem('course')).length) == 0) {
-            // courserCounterDiv.classList.add('hidden')
             basketShoppingDiv.classList.remove('basket-shopping')
         } else {
-            // courserCounterDiv.classList.remove('hidden')
             basketShoppingDiv.classList.add('basket-shopping')
-            // courserCounterDiv.innerHTML = (JSON.parse(localStorage.getItem('course')).length)
         }
     }
     rate(e) {
@@ -174,12 +154,10 @@ class Product {
         if (e.classList.contains('text-yellow-600')) {
             for (let i = lastChild - 1; i > that - 1; i--) {
                 children[i].classList.remove("text-yellow-600");
-                // console.log(children[i]);
             }
         } else {
             for (let i = firstChild - 1; i <= that - 1; i++) {
                 children[i].classList.add("text-yellow-600");
-                // console.log(children[i]);
             }
         }
 
@@ -199,7 +177,6 @@ class Product {
             total += elementPrice
             return total
         });
-        // console.log(total);
         let priceDiv = `
             <div class=" mx-1 border border-white">
                 <p>مجموع قیمت : <span>${total}</span> تومان</p>
@@ -215,32 +192,14 @@ class Product {
         let target = e.parentElement.firstElementChild.firstElementChild.textContent
         let targetNumber = Number(target)
         let totoalTargetNumber = Number(totoalTarget)
-        // let total2 = 0
-        // console.log(totoalTarget);
-        // console.log(target);
-        // let arrayLS = JSON.parse(localStorage.getItem('course'))
-        // arrayLS.forEach(element => {
-        // let elementPrice = Number(element.price)
-        // let total =
         let total2 = totoalTargetNumber - targetNumber
-        // total += elementPrice
-        // return total2
-        // console.log(total2);
-        // });
         let priceDiv = `
             <div class=" mx-1 border border-white pr-1 ">
                 <p class="-translate-x-1">مجموع قیمت : <span>${total2}</span> تومان</p>
             </div>
         
         `
-
         iconBasketResultPrice.innerHTML = priceDiv
-
-
-
-
-
-
     }
 }
 
@@ -292,13 +251,10 @@ class SingleProduct {
             title: document.querySelector('.descriptions h3').textContent,
             price: document.querySelector('.descriptions .price span').innerHTML,
             color: document.querySelector('.descriptions .color-desc span').textContent,
-
             size: document.querySelector('select').value
-            // id: courseInfo.querySelectorAll('i')[0].getAttribute('data-id')
         }
         this.addToCart(bagShopCourse)
         this.addToLS(bagShopCourse)
-        // console.log(bagShopCourse.image);
     }
 
     addToCart(cInfo) {
@@ -309,41 +265,15 @@ class SingleProduct {
         bagArray.push(bagShopCourse)
         localStorage.setItem('course', JSON.stringify(bagArray))
     }
-    // loadedBShCart() {
-    //     let getFromLS = getBagCourseFromLS()
-    //     getFromLS.forEach(cInfo => {
-    //         shoppingCartDiv(cInfo)
-    //     });
-    // }
-    
-    // removeDivShoppingCart(e) {
-    //     if (e.classList.contains('remove-course')) {
-    //         e.parentElement.parentElement.parentElement.remove()
-    //     }
-        // let imgSrc = e.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.src
-    //     this.removeFromLS(imgSrc)
-    //     this.hideBtn(imgSrc)
-    // }
-    // removeFromLS(img) {
-        
-    //     let getFromLS = getBagCourseFromLS()
-    //     getFromLS.forEach((bagShopCourse, index) => {
-    //         if (bagShopCourse.image == img) {
-    //             getFromLS.splice(index, 1)
-    //         }
-    //         localStorage.setItem('course', JSON.stringify(getFromLS))
-
-    //     });
-       
-    // }
     removeDivShoppingCart(e) {
         if (e.classList.contains('remove-course')) {
             e.parentElement.parentElement.parentElement.remove()
         }
         let imgSrc = e.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.src
+        this.showBtn(imgSrc)
         this.removeFromLS(imgSrc)
         product.courserCounter()
-        // this.hideBtn(imgSrc)
+        product.showHideCourseResultDiv()
     }
     removeFromLS(img) {
         let getFromLS = getBagCourseFromLS()
@@ -358,17 +288,39 @@ class SingleProduct {
     courserCounter() {
         if ((JSON.parse(localStorage.getItem('course')).length) == 0) {
             courserCounterDiv.classList.add('hidden')
-            // iconBasketResult.classList.add('hidden')
-            console.log('1');
-
         } else {
             courserCounterDiv.classList.remove('hidden')
-            // iconBasketResult.classList.remove('hidden')
-            console.log('2');
             courserCounterDiv.innerHTML = (JSON.parse(localStorage.getItem('course')).length)
         }
     }
+    hideBtn() {
+        let bagShopCourse = {
+            image: document.querySelector('.bag-img').src,
+            title: document.querySelector('.descriptions h3').textContent,
+            price: document.querySelector('.descriptions .price span').innerHTML,
+            color: document.querySelector('.descriptions .color-desc span').textContent,
+            size: document.querySelector('select').value
+        }
+        let getFromLS = getBagCourseFromLS()
+        getFromLS.forEach((element) => {
+            if (element.image == bagShopCourse.image) {
+                bagButton.classList.add('hidden')
+            }
+            localStorage.setItem('course', JSON.stringify(getFromLS))
+        });
 
+    }
+    showBtn(img){
+        let getFromLS = getBagCourseFromLS()
+        console.log(img);
+        getFromLS.forEach((element) => {
+            if (element.image == img) {
+                bagButton.classList.remove('hidden')
+            }
+            localStorage.setItem('course', JSON.stringify(getFromLS))
+        });
+        
+    }
 }
 
 
@@ -380,22 +332,18 @@ let singleProduct = new SingleProduct()
 // search Events
 
 search.addEventListener('click', () => {
-    // console.log('hi');
     searchInput.classList.remove('w-0')
     searchInput.classList.add('w-full')
-    // console.log('hi');
 })
 
 searchInput.addEventListener('blur', () => {
-    // console.log('hi');
-    // console.log('hi');
     searchInput.classList.remove('w-full')
     searchInput.classList.add('w-0')
 })
 
 // fav events
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
     favoritDiv.loadContentcart()
     favoritDiv.favCounter()
     favoritDiv.hideShowFavResultDiv()
@@ -412,6 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
     product.totalPrice()
     product.courserCounter()
     product.showHideCourseResultDiv()
+    singleProduct.hideBtn()
 })
 iconBasketResult.addEventListener('click', (e) => {
     product.removeTotal(e.target)
@@ -434,20 +383,15 @@ graySpan.addEventListener('click', () => {
 orangeSpan.addEventListener('click', () => {
     singleProduct.orangeColor()
 })
-// document.addEventListener('DOMContentLoaded',()=>{
-//     singleProduct.loadedBShCart()
-// })
 bagButton.addEventListener('click', (e) => {
     e.preventDefault()
     singleProduct.getBagInfo(e.target)
-    singleProduct.addToCart()
-    // product.addToLS()
     product.totalPrice()
     singleProduct.courserCounter()
     product.showHideCourseResultDiv()
+    singleProduct.hideBtn()
 })
 iconBasketResult.addEventListener('click', (e) => {
-    // singleProduct.removeTotal(e.target)
     singleProduct.removeDivShoppingCart(e.target)
     singleProduct.removeFromLS()
 
@@ -476,6 +420,7 @@ function shoppingCartDiv2(cInfo) {
 
     iconFavResult.insertAdjacentHTML('afterbegin', shoppingDiv)
 }
+
 function getFromStorage2() {
     let favArray
     if (localStorage.getItem('fav')) {
@@ -485,25 +430,23 @@ function getFromStorage2() {
     }
     return favArray
 }
+
 function shoppingCartDiv(cInfo) {
-    let LS = JSON.parse(localStorage.getItem('course'))
-for (let i = 0; i < LS.length/2; i++) {
-    // console.log(LS[i]);
     let shoppingDiv = `
     <div class="civil-shopping-cart flex mx-1 border border-white">
     <div class="cart-img w-1/3 h-full my-auto flex justify-center items-center">
-        <img src="${LS[i].image}">
+        <img src="${cInfo.image}">
     </div>
     <div class="cart-desc w-2/3 block mr-3 mt-5">
     <div class="title ">
-    <p class="my-6 text-xl">${LS[i].title}</p>
+    <p class="my-6 text-xl">${cInfo.title}</p>
     </div>
     <div class="price flex relative">
     
-    <p><span class="py-6">${LS[i].price}</span>تومان </p>
+    <p><span class="py-6">${cInfo.price}</span>تومان </p>
             <span
                 class="flex justify-center items-center absolute left-5 translate-y-7 remove-course w-6 h-6 rounded-full text-gray-300 cursor-pointer z-20"
-                data-id="${LS[i].id}">X</span>
+                data-id="${cInfo.id}">X</span>
                 </div>
     </div>
     </div>
@@ -511,7 +454,7 @@ for (let i = 0; i < LS.length/2; i++) {
 
     iconBasketResult.insertAdjacentHTML('afterbegin', shoppingDiv)
 }
-}
+
 function getFromStorage() {
     let courseArray
     if (localStorage.getItem('course')) {
@@ -521,6 +464,7 @@ function getFromStorage() {
     }
     return courseArray
 }
+
 function getBagCourseFromLS() {
     let bagArray
     if (localStorage.getItem('course')) {
@@ -530,7 +474,3 @@ function getBagCourseFromLS() {
     }
     return bagArray
 }
-
-
-
-
