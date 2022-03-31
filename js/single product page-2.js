@@ -162,13 +162,13 @@ class Product {
         }
 
     }
-    loadedStorage() {
-        if (localStorage.length == 0) {
-            console.log('it is 0');
-            arrayData = []
-            localStorage.setItem('course', arrayData)
-        }
-    }
+    // loadedStorage() {
+    //     if (localStorage.length == 0) {
+    //         console.log('it is 0');
+    //         arrayData = []
+    //         localStorage.setItem('course', arrayData)
+    //     }
+    // }
     totalPrice() {
         let arrayLS = JSON.parse(localStorage.getItem('course'))
         let total = 0
@@ -321,6 +321,54 @@ class SingleProduct {
         });
         
     }
+    loadedStorage() {
+        if (localStorage.length == 0) {
+            // console.log("object");
+            let courseArray
+            if (localStorage.getItem('course')) {
+                courseArray = JSON.parse(localStorage.getItem('course'))
+            } else {
+                courseArray = []
+            }
+            let strCourse = JSON.stringify(courseArray)
+            localStorage.setItem('course', strCourse)
+
+
+            let favArray
+            if (localStorage.getItem('fav')) {
+                favArray = JSON.parse(localStorage.getItem('fav'))
+            } else {
+                favArray = []
+            }
+            let strCoursee = JSON.stringify(courseArray)
+            localStorage.setItem('fav', strCoursee)
+
+            let arrayRate
+            if (localStorage.getItem('rated')) {
+                arrayRate = JSON.parse(localStorage.getItem('rated'))
+            } else {
+                arrayRate = []
+            }
+            let strCourseee = JSON.stringify(arrayRate)
+            localStorage.setItem('rated', strCourseee)
+
+        }
+
+    }
+    disableBtn(){
+        bagButton.disabled=true
+    }
+    enableBtn(){
+        bagButton.disabled=false
+    }
+    validateBtn(){
+        if ((backColor.classList.contains('bg-blue-200')||backColor.classList.contains('bg-red-200')||backColor.classList.contains('bg-orange-200')||backColor.classList.contains('bg-gray-200')||backColor.classList.contains('bg-blue-200'))&&(select.value==1||select.value==2||select.value==3||select.value==4)) {
+            // console.log('object');
+            this.enableBtn()
+        }else{
+            this.disableBtn()
+        }
+    }
 }
 
 
@@ -344,6 +392,7 @@ searchInput.addEventListener('blur', () => {
 // fav events
 
 document.addEventListener('DOMContentLoaded', () => {
+    singleProduct.loadedStorage()
     favoritDiv.loadContentcart()
     favoritDiv.favCounter()
     favoritDiv.hideShowFavResultDiv()
@@ -356,11 +405,12 @@ iconFavResult.addEventListener('click', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     product.loadContentcart()
-    product.loadedStorage()
+    // product.loadedStorage()
     product.totalPrice()
     product.courserCounter()
     product.showHideCourseResultDiv()
     singleProduct.hideBtn()
+    singleProduct.validateBtn()
 })
 iconBasketResult.addEventListener('click', (e) => {
     product.removeTotal(e.target)
@@ -395,6 +445,9 @@ iconBasketResult.addEventListener('click', (e) => {
     singleProduct.removeDivShoppingCart(e.target)
     singleProduct.removeFromLS()
 
+})
+document.addEventListener('click',()=>{
+    singleProduct.validateBtn()
 })
 
 
